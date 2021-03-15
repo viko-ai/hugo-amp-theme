@@ -1,0 +1,53 @@
+[build]
+publish = "public"
+command = "hugo --gc --minify"
+
+[build.environment]
+HUGO_VERSION = "0.80.0"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+
+[[headers]]
+for = "/*.svg"
+[headers.values]
+# Multi-value headers are expressed with multi-line strings.
+cache-control = '''
+    public,
+    max-age=604800,
+    immutable'''
+
+[[headers]]
+for = "/*.png"
+[headers.values]
+# Multi-value headers are expressed with multi-line strings.
+cache-control = '''
+    public,
+    max-age=604800,
+    immutable'''
+
+[[headers]]
+for = "/*.jpg"
+[headers.values]
+# Multi-value headers are expressed with multi-line strings.
+cache-control = '''
+    public,
+    max-age=604800,
+    immutable'''
+
+[[headers]]
+for = "/*.js"
+[headers.values]
+# Multi-value headers are expressed with multi-line strings.
+cache-control = '''
+    public,
+    max-age=604800,
+    immutable'''
+
+[[headers]]
+for = "/*.css"
+[headers.values]
+# Multi-value headers are expressed with multi-line strings.
+cache-control = '''
+    public,
+    max-age=604800,
+    immutable'''

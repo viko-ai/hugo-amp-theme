@@ -1,0 +1,58 @@
+{{ $options := (dict "outputStyle" "compressed") }}
+{{ $css := resources.Get "css/main.scss" | toCSS $options }}
+{{ $js := resources.Get "js/main.js" | resources.Fingerprint "md5" }}
+
+{{ if hugo.IsProduction }}
+    {{/* Purge unused css and minify it */}}
+    {{ $css = $css | resources.PostCSS (dict "inlineImports" true) }}
+    {{ $css = $css | minify | resources.Fingerprint "md5" }}
+{{ end }}
+
+<title>
+    {{- if .IsHome -}}
+        {{ .Site.Title }}
+    {{- else -}}
+        {{ .Title }} – Acme Corp
+    {{- end -}}
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="{{ .Site.Params.author }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Preload fonts -->
+<link rel="preload" href="/fonts/Montserrat-Regular/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+
+<!-- Template Favicon & Icons Start -->
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/images/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- // Template Favicon & Icons-->
+
+<!-- CSS & JS -->
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+<!-- // CSS & JS -->
+
+{{- if .IsHome -}}
+    <meta name="description" content="{{ .Site.Params.description }}">
+{{ else }}
+    <meta name="description" content="{{ .Description }}">
+{{ end }}
+{{ with .Params.no_index }}
+    <meta name="robots" content="noindex, noarchive">
+{{ end }}
+{{ with  .OutputFormats.Get "amp" -}}
+    <link rel="amphtml" href="{{ .Permalink }}">
+{{ end }}
+{{ if eq .Section "blog" }}
+    {{ if eq .Kind "page" }}
+        {{ partial "amp/ld+json.html" . }}
+    {{ end }}
+{{ end }}

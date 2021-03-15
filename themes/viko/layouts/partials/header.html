@@ -1,0 +1,39 @@
+{{ $features := relref . "features" }}
+{{ $featureOne := relref . "features/feature-one" }}
+{{ $featureTwo := relref . "features/feature-two" }}
+{{ $benefits := relref . "benefits" }}
+{{ $blog := relref . "blog" }}
+{{ $contact := relref . "contact" }}
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item " href="{{ $.Site.BaseURL }}">
+                <img src="/images/logo.png" alt="Logo" />
+            </a>
+            <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a href="{{ $features }}" class="navbar-link">Features</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item navbar-item-dropdown" href="{{ $featureOne }}">Feature one</a>
+                        <a class="navbar-item navbar-item-dropdown" href="{{ $featureTwo }}">Feature two</a>
+                    </div>
+                </div>
+                <a class="navbar-item" href="{{ $benefits }}">Benefits</a>
+                <a class="navbar-item" href="{{ $blog }}">Blog</a>
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="{{ $contact }}" class="button is-primary">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

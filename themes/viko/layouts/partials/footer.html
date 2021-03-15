@@ -1,0 +1,84 @@
+{{ $home := $.Site.BaseURL }}
+
+{{ $addressOne := .Site.Params.contact.address_one }}
+{{ $addressTwo := .Site.Params.contact.address_two }}
+{{ $addressThree := .Site.Params.contact.address_three }}
+
+{{ $email := .Site.Params.contact.email }}
+{{ $phone := .Site.Params.phone.contact.number }}
+{{ $phoneText := .Site.Params.contact.phone.display }}
+{{ $features := relref . "features" }}
+{{ $benefits := relref . "benefits" }}
+{{ $careers := relref . "careers" }}
+{{ $press := relref . "press" }}
+{{ $terms := relref . "terms" }}
+{{ $blog := relref . "blog" }}
+{{ $privacy := relref . "privacy" }}
+{{ $twitter_url := .Site.Params.social.twitter }}
+{{ $facebook_url := .Site.Params.social.facebook }}
+{{ $instagram_url := .Site.Params.social.instagram }}
+
+<footer class="footer vk-amp-footer">
+    <div class="container">
+        <div class="columns vk-amp-columns">
+            <div class="column vk-amp-column is-5">
+                <h2 class="title vk-amp-title is-5"><a href="{{ $home }}">Acme Corp</a></h2>
+                <p class="block">{{ $addressOne }}<br />{{ $addressTwo }} <br /> {{ $addressThree }}</p>
+                <div class="buttons vk-amp-buttons">
+                    {{ if eq ($.Scratch.Get "output-format") "amp" }}
+                    <a class="button vk-amp-button" href="{{ $twitter_url }}">
+                        <amp-img src="/images/icons/twitter.svg" width="20" height="20" alt="Twitter logo"></amp-img>
+                    </a>
+                    <a class="button vk-amp-button" href="{{ $facebook_url }}">
+                        <amp-img src="/images/icons/facebook-f.svg" width="20" height="20" alt="Facebook logo"></amp-img>
+                    </a>
+                    <a class="button vk-amp-button" href="{{ $instagram_url }}">
+                        <amp-img src="/images/icons/instagram.svg" width="20" height="20" alt="Instagram logo"></amp-img>
+                    </a>
+                    {{ else }}
+                    <a class="button" href="{{ $twitter_url }}">
+                        <img src="/images/icons/twitter.svg" width="20" height="20" alt="Twitter logo" />
+                    </a>
+                    <a class="button" href="{{ $facebook_url }}">
+                        <img src="/images/icons/facebook-f.svg" width="20" height="20" alt="Facebook logo" />
+                    </a>
+                    <a class="button" href="{{ $instagram_url }}">
+                        <img src="/images/icons/instagram.svg" width="20" height="20" alt="Instagram logo" />
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="column vk-amp-column">
+                <h3 class="title vk-amp-title is-6">Products</h3>
+                <ul>
+                    <li><a href="{{ $features }}">Features</a></li>
+                    <li><a href="{{ $benefits }}">Benefits</a></li>
+                </ul>
+            </div>
+            <div class="column vk-amp-column">
+                <h3 class="title vk-amp-title is-6">About us</h3>
+                <ul>
+                    <li><a href="{{ $careers }}">Careers</a></li>
+                    <li><a href="{{ $press }}">Press</a></li>
+                </ul>
+            </div>
+            <div class="column vk-amp-column">
+                <h3 class="title vk-amp-title is-6">Contact</h3>
+                <ul>
+                    <li><a href="mailto:{{ $email }}">{{ $email }}</a></li>
+                    <li><a href="tel:{{ $phone }}">{{ $phoneText }}</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="columns vk-amp-columns">
+            <div class="column vk-amp-column">
+                <a class="mr-5 vk-amp-mr-5" href="{{ $terms }}">Terms of use</a>
+                <a href="{{ $privacy }}">Privacy policy</a>
+            </div>
+            <div class="column vk-amp-column has-text-right-tablet">
+                <p class="subtitle vk-amp-subtitle is-6">{{ partial "copyright" . }}</p>
+            </div>
+        </div>
+    </div>
+</footer>

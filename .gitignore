@@ -1,0 +1,5 @@
+.idea
+public/
+node_modules/
+resources/
+.DS_Store

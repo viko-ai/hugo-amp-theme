@@ -1,0 +1,41 @@
+baseURL = "https://www.acme-corp.com"
+languageCode = "en-gb"
+# Site title
+title = "Lorem ipsum dolor sit amet"
+theme = "viko"
+enableRobotsTXT = true
+copyright = "Copyright © 2018-{year} Acme Corp. All rights reserved."
+
+[params]
+author = "John Doe"
+description = "Lorem ipsum dolor sit amet"
+
+# Text that appears on the home page
+[params.home]
+title = "Lorem ipsum dolor sit amet"
+subtitle = "Vestibulum interdum magna"
+intro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a enim nisl. Aenean in ullamcorper tortor, in pretium dui. Vivamus viverra maximus elit."
+
+# Contact page and footer
+[params.contact]
+email = "team@acme-corp.com"
+full_address = "Acme Corp Inc, 1 Main Street, New York, NY, 10001"
+address_one = "Acme Corp Inc."
+address_two = "1 Main Street"
+address_three = "New York, NY, 10001"
+
+# Contact page and footer
+[params.contact.phone]
+number = "+1123456789"
+display = "+1 (123) 456 789"
+
+# Contact page
+[params.contact.whatsapp]
+number = "+1123456789"
+display = "+1 (123) 456 789"
+
+# Footer
+[params.social]
+twitter = "https://twitter.com/acme"
+facebook = "https://www.facebook.com/acme/"
+instagram = "https://www.instagram.com/acme/"

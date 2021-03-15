@@ -1,0 +1,45 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - wget https://github.com/gohugoio/hugo/releases/download/v0.80.0/hugo_extended_0.80.0_Linux-64bit.tar.gz
+        - tar -xf hugo_extended_0.80.0_Linux-64bit.tar.gz hugo
+        - mv hugo /usr/bin/hugo
+        - rm -rf hugo_extended_0.80.0_Linux-64bit.tar.gz
+        - hugo --cleanDestinationDir --minify
+  artifacts:
+    baseDirectory: public
+    files:
+      - '**/*'
+  customHeaders:
+    - pattern: '/js/*'
+      headers:
+        - key: 'cache-control'
+          value: 'public, max-age=604800, immutable'
+    - pattern: '/css/*'
+      headers:
+        - key: 'cache-control'
+          value: 'public, max-age=604800, immutable'
+    - pattern: '**/*.png'
+      headers:
+        - key: 'cache-control'
+          value: 'public, max-age=604800, immutable'
+    - pattern: '**/*.svg'
+      headers:
+        - key: 'cache-control'
+          value: 'public, max-age=604800, immutable'
+    - pattern: '**/*.woff2'
+      headers:
+        - key: 'cache-control'
+          value: 'public, max-age=604800, immutable'
+    - pattern: '**/*.woff'
+      headers:
+        - key: 'cache-control'
+          value: 'public, max-age=604800, immutable'
+  cache:
+    paths:
+      - node_modules/**/*

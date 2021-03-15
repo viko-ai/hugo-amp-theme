@@ -1,0 +1,69 @@
+{{ define "main" }}
+{{ $address := .Site.Params.contact.full_address }}
+{{ $email := .Site.Params.contact.email }}
+{{ $phone := .Site.Params.contact.phone.number }}
+{{ $phoneText := .Site.Params.contact.phone.display }}
+{{ $whatsapp := .Site.Params.contact.whatsapp.number }}
+{{ $whatsappText := .Site.Params.contact.whatsapp.display }}
+<section class="vk-section">
+    <div class="container pt-3">
+        <div class="columns is-vcentered">
+            <div class="column is-6"><img src="https://via.placeholder.com/600x300.png" alt="Contact us"></div>
+            <div class="column is-6">
+                <h4 class="title is-spaced is-4">Let's talk about your widgets</h4>
+                <p class="subtitle">We're here to answer your questions</p>
+                <div>
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-24x24">
+                                <img src="/images/icons/map-marker.svg" alt="Map">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>{{ $address }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-24x24">
+                                <img src="/images/icons/phone.svg" alt="Phone icon">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p><a class="vk-muted" href="tel:{{ $phone }}">{{ $phoneText }}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-24x24">
+                                <img src="/images/icons/whatsapp.svg" alt="Whatsapp icon">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p><a class="vk-muted" href="tel:{{ $whatsapp }}">{{ $whatsappText }} (WhatsApp)</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-24x24">
+                                <img src="/images/icons/envelope.svg" alt="Envelope icon">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p><a class="vk-muted" href="mailto:{{ $email }}">{{ $email }}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

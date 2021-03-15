@@ -1,0 +1,19 @@
+{
+  "name": "viko",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.0",
+    "bulma": "^0.9.2",
+    "postcss": "^8.2.4"
+  },
+  "dependencies": {
+    "postcss-cli": "^8.3.1"
+  }
+}
