@@ -15,31 +15,6 @@ frontend:
     baseDirectory: public
     files:
       - '**/*'
-  customHeaders:
-    - pattern: '/js/*'
-      headers:
-        - key: 'cache-control'
-          value: 'public, max-age=604800, immutable'
-    - pattern: '/css/*'
-      headers:
-        - key: 'cache-control'
-          value: 'public, max-age=604800, immutable'
-    - pattern: '**/*.png'
-      headers:
-        - key: 'cache-control'
-          value: 'public, max-age=604800, immutable'
-    - pattern: '**/*.svg'
-      headers:
-        - key: 'cache-control'
-          value: 'public, max-age=604800, immutable'
-    - pattern: '**/*.woff2'
-      headers:
-        - key: 'cache-control'
-          value: 'public, max-age=604800, immutable'
-    - pattern: '**/*.woff'
-      headers:
-        - key: 'cache-control'
-          value: 'public, max-age=604800, immutable'
   cache:
     paths:
       - node_modules/**/*

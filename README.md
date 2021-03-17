@@ -1,17 +1,22 @@
 # Bulma based Hugo theme
 
-The theme used for the Viko Ai website. See [www.viko.ai][1] for a real world example. This repo also contains a sample 
-Hugo site illustrating how the theme can best be used. The theme itself can be found in the themes/ directory.
+The theme used for the Viko Ai website. See [www.viko.ai][1] for a real world example. We decided to make this
+theme available to the wider community. We hope it will be of use. This repo also contains a sample Hugo site 
+illustrating how the theme can best be used. The theme itself can be found in the [themes/viko](themes/viko) directory.
 
 ## Features
 
-* Responsive, Bulma based layout
+* Responsive, [Bulma][2] based layout
 * Tiny CSS footprint ~ 6kb (minified and compressed)
-* Includes standard and AMP pages
+* Includes standard and [AMP][4] pages
 * AWS Amplify and Netlify support
-* Generates Microdata for Google AMP news feed
-* SEO Optimised
+* ld+json Microdata for [Google AMP search][5]
+* SEO
 * Fast
+
+## Getting started
+
+Please see [DOCS.md](DOCS.md)
 
 ## Bulma
 
@@ -29,9 +34,17 @@ New and Blog style pages automatically generate an [AMP][4] version with the app
 
 These pages also include the ld+json microdata to feature in [Google's rich results][5]
 
-## SEO Optimised
+## SEO
 
-Without any crazy hacks or spammy stuff. Just sound practices
+Forget the crazy hacks or spammy stuff. Modern SEO basically boils down to:
+
+* Content content content!
+* Valid, well structured HTML
+* Mobile friendly
+* Fast
+* Secure
+
+We've done our best to achieve these goals.
 
 ## Fast
 
