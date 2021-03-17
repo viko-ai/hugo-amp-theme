@@ -1,18 +1,35 @@
 # Getting started
 
+This repo contains the basic theme we use for our own [www.viko.ai](https://www.viko.ai) website. We've packaged
+the theme within a demo site showing how it can best be used. Although it has some quirks, we have been really 
+impressed with Hugo as a static site generator. For tech focussed organisations we think it's hard to beat.
+
+## Useful tools
+
+There are a couple of online SaaS platforms that we highly recommend. **Please note**: We're not in any way affiliated 
+with these organisations.
+
+* [Shuffle.dev](https://shuffle.dev) - Allows you to quickly prototype Bulma based (and other) websites. Unlike some
+  prototyping tools, Shuffle generates real production HTML and CSS that can be used as the basis for your hugo 
+  templates.
+  
+* [Canva](https://www.canva.com) - Great for creating visual elements and quicker than messing around in 
+  Photoshop/Illustrator.
+
 ## Contents
 
 * [Requirements](#requirements)
 * [Config](#config)
 * [Adding a blog post](#adding-a-blog-post)
 * [Adding a news article](#adding-a-news-article)
-* [Use of images](#use-of-images)
-* [Modifying specific pages](#modifying-specific-pages)
-    * Home
-    * Careers
-    * Features
-    * Benefits
-    * Terms & Privacy
+* [Images](#images)
+* [Modifying individual pages](#modifying-individual-pages)
+    * [Home](#home-page)
+    * [Careers](#careers)
+    * [Features](#features)
+    * [Benefits](#benefits)
+    * [Terms & Privacy](#terms-and-privacy)
+* [CSS](#css)  
 * [Deployment](#deployment)
 
 ## Requirements
@@ -78,6 +95,12 @@ The list, single and single AMP templates assume various sizes of images are pre
 You should replace these images but ensure the appropriate aspect ratios are preserved. These images are also
 referenced in the generated ld+json microdata which is needed for AMP rich results.
 
+## List and single page templates
+
+We include a default list.html and single.html template which will render for all pages that don't have their own
+template. We also include a single.amp.html template. As the name implies, this renders an AMP version of a "single"
+page.
+
 ## Modifying individual pages
 
 ### Home page
@@ -120,6 +143,12 @@ The contact us page is based on the template at `themes/viko/layouts/_default/co
 
 These are both standard markdown powered pages and can be changed by editing `content/terms.md` and
 `content/privacy.md`. They are based on the default single template at `themes/viko/layouts/_default/single.html`
+
+## CSS
+
+Bulma variables can be overridden in 
+[themes/viko/assets/css/_custom-variables.scss](themes/viko/assets/css/_custom-variables.scss). You can add your
+own custom styles in [themes/viko/assets/css/_custom-styles.scss](themes/viko/assets/css/_custom-styles.scss)
 
 ## Deployment
 

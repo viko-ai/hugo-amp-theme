@@ -1,3 +1,7 @@
+{{/* This partial is used by both single.html and single.amp.html. */}}
+{{/* It reads the scratch output-format variable to determine if it's being called from an AMP page */}}
+{{/* if so it renders AMP compatible images */}}
+
 {{ $home := $.Site.BaseURL }}
 
 {{ $addressOne := .Site.Params.contact.address_one }}
@@ -5,8 +9,10 @@
 {{ $addressThree := .Site.Params.contact.address_three }}
 
 {{ $email := .Site.Params.contact.email }}
+
 {{ $phone := .Site.Params.phone.contact.number }}
 {{ $phoneText := .Site.Params.contact.phone.display }}
+
 {{ $features := relref . "features" }}
 {{ $benefits := relref . "benefits" }}
 {{ $careers := relref . "careers" }}
@@ -14,6 +20,7 @@
 {{ $terms := relref . "terms" }}
 {{ $blog := relref . "blog" }}
 {{ $privacy := relref . "privacy" }}
+
 {{ $twitter_url := .Site.Params.social.twitter }}
 {{ $facebook_url := .Site.Params.social.facebook }}
 {{ $instagram_url := .Site.Params.social.instagram }}
@@ -26,25 +33,25 @@
                 <p class="block">{{ $addressOne }}<br />{{ $addressTwo }} <br /> {{ $addressThree }}</p>
                 <div class="buttons vk-amp-buttons">
                     {{ if eq ($.Scratch.Get "output-format") "amp" }}
-                    <a class="button vk-amp-button" href="{{ $twitter_url }}">
-                        <amp-img src="/images/icons/twitter.svg" width="20" height="20" alt="Twitter logo"></amp-img>
-                    </a>
-                    <a class="button vk-amp-button" href="{{ $facebook_url }}">
-                        <amp-img src="/images/icons/facebook.svg" width="20" height="20" alt="Facebook logo"></amp-img>
-                    </a>
-                    <a class="button vk-amp-button" href="{{ $instagram_url }}">
-                        <amp-img src="/images/icons/instagram.svg" width="20" height="20" alt="Instagram logo"></amp-img>
-                    </a>
+                        <a class="button vk-amp-button" href="{{ $twitter_url }}">
+                            <amp-img src="/images/icons/twitter.svg" width="20" height="20" alt="Twitter logo"></amp-img>
+                        </a>
+                        <a class="button vk-amp-button" href="{{ $facebook_url }}">
+                            <amp-img src="/images/icons/facebook-f.svg" width="20" height="20" alt="Facebook logo"></amp-img>
+                        </a>
+                        <a class="button vk-amp-button" href="{{ $instagram_url }}">
+                            <amp-img src="/images/icons/instagram.svg" width="20" height="20" alt="Instagram logo"></amp-img>
+                        </a>
                     {{ else }}
-                    <a class="button" href="{{ $twitter_url }}">
-                        <img src="/images/icons/twitter.svg" width="20" height="20" alt="Twitter logo" />
-                    </a>
-                    <a class="button" href="{{ $facebook_url }}">
-                        <img src="/images/icons/facebook.svg" width="20" height="20" alt="Facebook logo" />
-                    </a>
-                    <a class="button" href="{{ $instagram_url }}">
-                        <img src="/images/icons/instagram.svg" width="20" height="20" alt="Instagram logo" />
-                    </a>
+                        <a class="button" href="{{ $twitter_url }}">
+                            <img src="/images/icons/twitter.svg" width="20" height="20" alt="Twitter logo" />
+                        </a>
+                        <a class="button" href="{{ $facebook_url }}">
+                            <img src="/images/icons/facebook-f.svg" width="20" height="20" alt="Facebook logo" />
+                        </a>
+                        <a class="button" href="{{ $instagram_url }}">
+                            <img src="/images/icons/instagram.svg" width="20" height="20" alt="Instagram logo" />
+                        </a>
                     {{ end }}
                 </div>
             </div>

@@ -4,45 +4,46 @@
 <body>
 {{- partial "header.html" . -}}
 {{ if .Params.breadcrumb }}
-  {{- partial "breadcrumb.html" . -}}
+    {{- partial "breadcrumb.html" . -}}
 {{ end }}
-{{ if  .OutputFormats.Get "amp" -}}
-  {{ partial "amp/ld+json.html" . }}
+{{ if .OutputFormats.Get "amp" -}}
+    {{ partial "amp/ld+json.html" . }}
 {{ end }}
 <header>
-  <h1 class="title is-3 has-text-centered">{{ .Title }}</h1>
-  <section>
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column">
-          <p class="has-text-centered">{{ .PublishDate.Format "2 Jan 2006" }} {{ partial "reading-time.html" . }}</p>
+    <h1 class="title is-3 has-text-centered">{{ .Title }}</h1>
+    <section>
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <p class="has-text-centered">{{ .PublishDate.Format "2 Jan 2006" }} {{ partial "reading-time.html" .
+                        }}</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 </header>
 <main>
-  {{ with $page := . }}
-    {{ with .Resources.GetMatch "images/primary/16x9.png" }}
-      <div class="container my-6">
+{{ with $page := . }}
+{{ with .Resources.GetMatch "images/primary/16x9.png" }}
+    <div class="container my-6">
         <figure class="image is-16by9">
-          <img src="{{ .RelPermalink }}" alt="{{ $page.Title }}" />
+            <img src="{{ .RelPermalink }}" alt="{{ $page.Title }}"/>
         </figure>
-      </div>
-    {{ end }}
-  {{ end }}
-
-  <section class="vk-section">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-three-quarters">
-          <div class="content">
-            {{ .Content }}
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+{{ end }}
+{{ end }}
+
+<section class="vk-section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-three-quarters">
+                <div class="content">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </main>
 {{- partial "footer.html" . -}}
 </body>
