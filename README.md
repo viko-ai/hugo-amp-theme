@@ -13,7 +13,6 @@ Hugo site illustrating how the theme can best be used. The theme itself can be f
 * SEO Optimised
 * Fast
 
-
 ## Bulma
 
 This theme is based on the excellent [Bulma framework][2]. We chose Bulma as it's simple, yet powerful. Bulma does not

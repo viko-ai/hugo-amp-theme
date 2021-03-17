@@ -1,11 +1,16 @@
 {{ $1x1 := .Resources.GetMatch "images/primary/1x1.png" }}
 {{ $4x3 := .Resources.GetMatch "images/primary/4x3.png" }}
 {{ $16x9 := .Resources.GetMatch "images/primary/16x9.png" }}
+{{ $author := .Site.Params.author }}
+
+{{ $articleType := "BlogPosting" }}
+{{ if eq .Section "press" }} {{ $articleType = "NewsArticle" }} {{ end }}
+
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
+        "@type": {{ $articleType }},
         "name": {{ .Title }},
         "mainEntityOfPage": {{ .Permalink }},
         "headline": {{ .Title }},
@@ -17,14 +22,14 @@
         "description": {{ .Description }},
         "author": {
             "@type": "Person",
-            "name": "John Doe"
+            "name": {{ $author }}
         },
         "publisher": {
             "@type": "Organization",
             "name": "Acme Corp",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.acme-corp.com/images/amp-logo.png"
+                "url": "/images/logo.png"
             }
         },
         "datePublished": {{ .PublishDate }},

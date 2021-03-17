@@ -12,23 +12,20 @@
 {{ define "main" }}
     {{ $demo := .Site.Params.demo_url }}
     {{ $contact := relref . "contact" }}
-    {{ $features := relref . "features" }}
     <section class="hero">
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-vcentered vk-is-reversed">
                     <div class="column is-6">
-                        <h1 class="title title--home is-spaced">{{ .Site.Params.home.title }}</h1>
-                        <h2 class="subtitle">{{ .Site.Params.home.subtitle }}</h2>
+                        <h1 class="title">{{ .Site.Params.home.title }}</h1>
                         <p class="mb-5">{{ .Site.Params.home.intro }}</p>
                         <div class="buttons">
                             <a class="button is-primary" href="{{ $contact }}">Contact us</a>
-                            <a class="button is-text" href="{{ $features }}">features</a>
                         </div>
                     </div>
                     <div class="column is-6">
                         <figure class="image is-4by3">
-                            <img src="https://via.placeholder.com/1200x900.png" alt="Acme landing page">
+                            <img src="/images/home.png" alt="{{ .Site.Title }}">
                         </figure>
                     </div>
                 </div>

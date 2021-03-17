@@ -6,6 +6,9 @@
 {{ if .Params.breadcrumb }}
   {{- partial "breadcrumb.html" . -}}
 {{ end }}
+{{ if  .OutputFormats.Get "amp" -}}
+  {{ partial "amp/ld+json.html" . }}
+{{ end }}
 <header>
   <h1 class="title is-3 has-text-centered">{{ .Title }}</h1>
   <section>
@@ -20,7 +23,7 @@
 </header>
 <main>
   {{ with $page := . }}
-    {{ with .Resources.GetMatch "images/primary/16x9.svg" }}
+    {{ with .Resources.GetMatch "images/primary/16x9.png" }}
       <div class="container my-6">
         <figure class="image is-16by9">
           <img src="{{ .RelPermalink }}" alt="{{ $page.Title }}" />

@@ -27,7 +27,7 @@
             {{ with $page := . }}
             <div class="columns is-centered">
                 <div class="column is-4">
-                    {{ with .Resources.GetMatch "images/primary/16x9.svg" }}
+                    {{ with .Resources.GetMatch "images/primary/16x9.png" }}
                         <figure class="image is-16by9">
                             <img src="{{ .RelPermalink }}" alt="{{ $page.Title }}" />
                         </figure>

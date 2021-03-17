@@ -1,10 +1,12 @@
 ---
 title: "Careers"
 date: 2021-01-27T17:00:48Z
-draft: false
+draft: true
 layout: careers
-description: We're always on the look out for talent, and we recruit globally. Maybe you're just the person we need
-intro: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend est dui. Curabitur in magna leo. Donec malesuada volutpat sem eu condimentum. Nulla sed lectus dolor.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend est dui.
+intro: >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend est dui. 
+    Curabitur in magna leo. Donec malesuada volutpat sem eu condimentum. Nulla sed lectus dolor.
 ---
 {{< careers/benefits >}} 
     {{< careers/benefit title="The latest technology" image="https://via.placeholder.com/400x400.png" >}}

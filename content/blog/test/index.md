@@ -1,12 +1,12 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Test"
+date: 2021-03-15T17:47:14Z
 breadcrumb: true
 outputs:
  - HTML
  - AMP
 description: >
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat lacinia turpis, vitae tristique 
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat lacinia turpis, vitae tristique
    quam bibendum vel. Nam consequat purus sed arcu porttitor, non vehicula est mattis. Curabitur
 draft: true
 ---

@@ -32,7 +32,7 @@
     <h1 class="vk-amp-title is-3 vk-amp-has-text-centered">{{ .Title }}</h1>
     <span class="vk-amp-subtitle vk-amp-has-text-centered">{{ .PublishDate.Format "2 Jan 2006" }} {{ partial "reading-time.html" . }}</span>
     {{ with $page := . }}
-        {{ with .Resources.GetMatch "images/primary/16x9.svg" }}
+        {{ with .Resources.GetMatch "images/primary/16x9.png" }}
             <figure class="vk-amp-primary-image">
                 <amp-img
                         layout="responsive"

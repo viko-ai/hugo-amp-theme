@@ -1,6 +1,5 @@
 baseURL = "https://www.acme-corp.com"
 languageCode = "en-gb"
-# Site title
 title = "Lorem ipsum dolor sit amet"
 theme = "viko"
 enableRobotsTXT = true
@@ -19,13 +18,16 @@ intro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a enim n
 # Contact page and footer
 [params.contact]
 email = "team@acme-corp.com"
+# This appears on the contact page
 full_address = "Acme Corp Inc, 1 Main Street, New York, NY, 10001"
+# These are used in the footer
 address_one = "Acme Corp Inc."
 address_two = "1 Main Street"
 address_three = "New York, NY, 10001"
 
 # Contact page and footer
 [params.contact.phone]
+# number appears as href="tel:xxx-xxx-xxx"
 number = "+1123456789"
 display = "+1 (123) 456 789"
 

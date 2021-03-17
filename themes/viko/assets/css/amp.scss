@@ -4,6 +4,7 @@ $body-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
 $gap: 1.5rem;
 $body-color: #4a4a4a;
 $title-color: #363636;
+$link-color: #5271FF;
 
 html {
   background-color: white;
@@ -26,7 +27,7 @@ body {
 }
 
 a {
-  color: #F71414;
+  color: $link-color;
   cursor: pointer;
   text-decoration: none;
 }

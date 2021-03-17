@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Test"
+date: 2021-03-16T10:22:13Z
 breadcrumb: true
 outputs:
  - HTML
