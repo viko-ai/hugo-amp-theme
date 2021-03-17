@@ -15,6 +15,8 @@ with these organisations.
   
 * [Canva](https://www.canva.com) - Great for creating visual elements and quicker than messing around in 
   Photoshop/Illustrator.
+  
+* [Favicon generator](https://realfavicongenerator.net) - Generate favicons compatible with all major browsers
 
 ## Contents
 
