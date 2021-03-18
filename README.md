@@ -6,6 +6,8 @@ The theme used for the Viko Ai website. See [www.viko.ai][1] for a real world ex
 theme available to the wider community, hoping it will be of use. This repo also contains a sample Hugo site 
 illustrating how the theme can best be used. The theme itself can be found in the [themes/viko](themes/viko) directory.
 
+![Viko home page screenshot](readme-images/viko-home-page.png)
+
 ## Features
 
 * Fast
