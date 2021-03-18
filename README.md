@@ -3,7 +3,7 @@
 ![Viko Ai logo](readme-images/viko-logo-sm.png)
 
 The theme used for the Viko Ai website. See [www.viko.ai][1] for a real world example. We decided to make this
-theme available to the wider community. We hope it will be of use. This repo also contains a sample Hugo site 
+theme available to the wider community, hoping it will be of use. This repo also contains a sample Hugo site 
 illustrating how the theme can best be used. The theme itself can be found in the [themes/viko](themes/viko) directory.
 
 ## Features
