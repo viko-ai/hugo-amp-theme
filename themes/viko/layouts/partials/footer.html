@@ -1,7 +1,8 @@
-{{/* This partial is used by both single.html and single.amp.html. */}}
-{{/* It reads the scratch output-format variable to determine if it's being called from an AMP page */}}
-{{/* if so it renders AMP compatible images */}}
-
+<!--
+    This partial is used by both single.html and single.amp.html.
+    It reads the scratch output-format variable to determine if it's being called from an AMP page
+    if so it renders AMP compatible images
+-->
 {{ $home := $.Site.BaseURL }}
 
 {{ $addressOne := .Site.Params.contact.address_one }}

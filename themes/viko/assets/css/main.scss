@@ -1,14 +1,9 @@
-/*! Theme created with the Bulma Builder (https://bulma.dev) */
-
+// First import Bulma's default Sass variables and functions
 @import "node_modules/bulma/sass/utilities/initial-variables.sass";
 @import "node_modules/bulma/sass/utilities/functions.sass";
 @import "node_modules/bulma/sass/utilities/derived-variables.sass";
 
-// Your variables
-$link: $green;
-$navbar-item-img-max-height: 2.2rem;
-@import 'custom-variables';
-
+// Define theme specific variables
 $orange-invert   : findColorInvert($orange);
 $yellow-invert   : findColorInvert($yellow);
 $green-invert    : findColorInvert($green);
@@ -44,6 +39,10 @@ $colors: mergeColorMaps(("white": ($white, $black), "black": ($black, $white), "
 $shades: mergeColorMaps(("black-bis": $black-bis, "black-ter": $black-ter, "grey-darker": $grey-darker, "grey-dark": $grey-dark, "grey": $grey, "grey-light": $grey-light, "grey-lighter": $grey-lighter, "white-ter": $white-ter, "white-bis": $white-bis), $custom-shades);
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7;
 
+// Custom variables and overrides
+@import 'custom-variables';
+
+// Now import the bulma Sass
 @import "node_modules/bulma/sass/utilities/_all.sass";
 @import "node_modules/bulma/sass/base/_all.sass";
 @import "node_modules/bulma/sass/elements/_all.sass";
@@ -52,6 +51,8 @@ $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7;
 @import "node_modules/bulma/sass/grid/_all.sass";
 @import "node_modules/bulma/sass/helpers/_all.sass";
 @import "node_modules/bulma/sass/layout/_all.sass";
+
+// theme specific styles, mostly relating to AMP pages
 @import "viko-styles";
 
 // Your styles

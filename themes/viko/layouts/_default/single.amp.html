@@ -31,7 +31,7 @@
 
     {{ partial "amp/ld+json.html" . }}
 
-    {{/* tells nested partials this is an AMP page, see partials/footer.html */}}
+    <!-- tells nested partials this is an AMP page, see partials/footer.html -->
     {{ .Scratch.Set "output-format" "amp" }}
 </head>
 <body>

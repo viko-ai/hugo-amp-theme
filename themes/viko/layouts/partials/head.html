@@ -3,7 +3,7 @@
 {{ $js := resources.Get "js/main.js" | resources.Fingerprint "md5" }}
 
 {{ if hugo.IsProduction }}
-    {{/* Purge unused css and minify it */}}
+    <!-- Purge unused css and minify it -->
     {{ $css = $css | resources.PostCSS (dict "inlineImports" true) }}
     {{ $css = $css | minify | resources.Fingerprint "md5" }}
 {{ end }}
@@ -37,6 +37,8 @@
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 <!-- // CSS & JS -->
+
+{{ partial "generator" . }}
 
 {{- if .IsHome -}}
     <meta name="description" content="{{ .Site.Params.description }}">
