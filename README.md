@@ -1,4 +1,4 @@
-# Bulma based Hugo theme
+# AMP enabled Hugo theme
 
 ![Viko Ai logo](readme-images/viko-logo-sm.png)
 

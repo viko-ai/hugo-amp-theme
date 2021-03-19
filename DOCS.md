@@ -36,7 +36,7 @@ with these organisations.
 
 ## Requirements
 
-This theme requires the extended Hugo version 0.80.0 or later.
+This theme requires the [extended edition][6] of Hugo, version 0.80.0 or later.
 
 **Note**: Please use the extended version of Hugo for the SASS and PostCSS support
 
@@ -51,7 +51,7 @@ This theme requires the extended Hugo version 0.80.0 or later.
 Create a new post using `hugo new blog/xxx` where `xxx` is your chosen slug.
 
 **Important**: don't use a file extension e.g. `hugo new blog/xxx.md`. This theme makes use of
-Hugo [page resources][1]. `hugo new blog/xxx` will use the archetype found at `archetypes/blog` and create the
+Hugo [page resources][1]. Running `hugo new blog/xxx` will use the archetype found at `archetypes/blog` and create the
 appropriate directory structure.
 
 You can edit the new blog post by modifying `content/blog/xxx/index.md`.
@@ -70,10 +70,10 @@ Creating a new blog entry will automatically create AMP enabled versions which c
 Create a news article using `hugo new press/xxx` where `xxx` is your chosen slug.
 
 **Important**: As with blog posts, don't use a file extension e.g. `hugo new press/xxx.md`. This theme makes use of
-Hugo [page resources][1]. `hugo new press/xxx` will use the archetype found at `archetypes/press` and create the
-appropriate directory structure.
+Hugo [page resources][1]. Running `hugo new press/xxx` will use the archetype found at `archetypes/press` and create 
+the appropriate directory structure.
 
-You can edit the new blog post by modifying `content/press/xxx/index.md`.
+You can edit the new news article by modifying `content/press/xxx/index.md`.
 
 ### Schema.org markup
 
@@ -176,3 +176,4 @@ own themes/ directory. Enable the theme in your config.toml / config.yml with `t
 [3]: https://schema.org/NewsArticle
 [4]: https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html
 [5]: https://docs.netlify.com/configure-builds/file-based-configuration/
+[6]: https://gohugo.io/getting-started/installing/
