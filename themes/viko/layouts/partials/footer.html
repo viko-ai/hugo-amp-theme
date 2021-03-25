@@ -3,16 +3,13 @@
     It reads the scratch output-format variable to determine if it's being called from an AMP page
     if so it renders AMP compatible images
 -->
+
 {{ $home := $.Site.BaseURL }}
 
-{{ $addressOne := .Site.Params.contact.address_one }}
-{{ $addressTwo := .Site.Params.contact.address_two }}
-{{ $addressThree := .Site.Params.contact.address_three }}
-
-{{ $email := .Site.Params.contact.email }}
-
-{{ $phone := .Site.Params.phone.contact.number }}
-{{ $phoneText := .Site.Params.contact.phone.display }}
+{{ $orgName := .Site.Params.contact.org_name }}
+{{ $streetAddress := .Site.Params.contact.street_address }}
+{{ $city := .Site.Params.contact.city }}
+{{ $postCode := .Site.Params.contact.post_code }}
 
 {{ $features := relref . "features" }}
 {{ $benefits := relref . "benefits" }}
@@ -31,7 +28,7 @@
         <div class="columns vk-amp-columns">
             <div class="column vk-amp-column is-5">
                 <h2 class="title vk-amp-title is-5"><a href="{{ $home }}">Acme Corp</a></h2>
-                <p class="block">{{ $addressOne }}<br />{{ $addressTwo }} <br /> {{ $addressThree }}</p>
+                <p class="block">{{ $orgName }} <br /> {{ $streetAddress }} <br /> {{ $city }}, {{ $postCode }}</p>
                 <div class="buttons vk-amp-buttons">
                     {{ if eq ($.Scratch.Get "output-format") "amp" }}
                         <a class="button vk-amp-button" href="{{ $twitter_url }}">

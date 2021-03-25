@@ -5,9 +5,7 @@ breadcrumb: true
 outputs:
  - HTML
  - AMP
-description: >
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat lacinia turpis, vitae tristique
-   quam bibendum vel. Nam consequat purus sed arcu porttitor, non vehicula est mattis. Curabitur
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat lacinia turpis, vitae tristique
 draft: true
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non ultricies quam, at imperdiet justo. Proin vitae

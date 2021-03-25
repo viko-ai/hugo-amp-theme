@@ -46,6 +46,11 @@ This theme requires the [extended edition][6] of Hugo, version 0.80.0 or later.
 2. Modify `config.toml` to suit your needs
 3. Run in dev mode: `hugo -D server`
 
+**Important**: If you run hugo server without the draft flag i.e. `hugo server` you will see errors like
+`REF_NOT_FOUND: Ref "features" from page "tags/_index.md": page not found`. This is because the templates, in 
+particular the header and footer link to pages we assume to exist. Until all referenced pages are marked as 
+`draft: false`the links will fail without the `-D` flag.
+
 ## Adding a blog post
 
 Create a new post using `hugo new blog/xxx` where `xxx` is your chosen slug.

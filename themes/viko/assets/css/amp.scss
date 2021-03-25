@@ -1,3 +1,5 @@
+/** Reset CSS */
+
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain)
@@ -52,13 +54,13 @@ table {
   border-spacing: 0;
 }
 
-/* End Reset */
+/* END Reset CSS */
 
+$body-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
 $gap: 1.5rem;
-$body-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $body-color: #4a4a4a;
 $title-color: #363636;
-$link-color: #00d1b2;
+$link-color: #F71414;
 
 html {
   background-color: white;
@@ -86,12 +88,32 @@ a {
   text-decoration: none;
 }
 
-p {
-  margin: $gap 0;
+ul {
+  margin-left: 3rem;
+  li {
+    list-style-type: disc;
+  }
 }
 
-p:first-of-type {
-  margin-top: 0;
+h2 {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+strong {
+  font-weight: bold;
+  color: black;
+}
+
+.vk-amp-headerbar {
+  padding: 1rem;
 }
 
 .vk-amp-article {
@@ -135,13 +157,14 @@ p:first-of-type {
   flex-grow: 1;
   flex-shrink: 1;
   padding: 0.75rem 0;
-}
 
-.vk-amp-headerbar {
-  padding: 10px;
+  ul {
+    margin: 1rem;
+  }
 }
 
 .vk-amp-buttons {
+  margin: 1rem 0;
   display: flex;
   align-items: center;
 }
@@ -156,6 +179,14 @@ p:first-of-type {
   border-radius: 4px;
 }
 
+.vk-amp-mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.vk-amp-mr-2 {
+  margin-right: 0.5rem;
+}
+
 .vk-amp-mr-5 {
   margin-right: 1.5rem;
 }
@@ -163,4 +194,110 @@ p:first-of-type {
 .vk-amp-footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem;
+}
+
+.vk-is-flex {
+  display: flex;
+}
+
+/* BREADCRUMB */
+
+/* Style the list */
+ol.vk-amp-breadcrumb {
+  padding: 1rem 1rem 0 1rem;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ol.vk-amp-breadcrumb li {
+  display: inline;
+  font-size: 100%;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ol.vk-amp-breadcrumb li+li:before {
+  padding: 0 12px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ol.vk-amp-breadcrumb li a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+ol.vk-amp-breadcrumb li.is-active a {
+  color: $body-color;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Add a color on mouse-over */
+ol.vk-amp-breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+/* END BREADCRUMB */
+
+.vk-twitter {
+  background-image: url("/images/icons/twitter.svg");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+.vk-facebook {
+  background-image: url("/images/icons/facebook-f.svg");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+.vk-instagram {
+  background-image: url("/images/icons/instagram.svg");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+/* Content */
+
+.vk-amp-article {
+  h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  h3 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  p {
+    margin: $gap 0;
+  }
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  ol {
+    margin: 1rem;
+    li {
+      list-style-type: decimal;
+      margin: 1rem;
+    }
+  }
+
+  ul {
+    margin: 1rem;
+    li {
+      list-style-type: disc;
+      margin: 1rem;
+    }
+  }
 }

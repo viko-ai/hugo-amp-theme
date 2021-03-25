@@ -15,17 +15,20 @@ title = "Lorem ipsum dolor sit amet"
 subtitle = "Vestibulum interdum magna"
 intro = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a enim nisl. Aenean in ullamcorper tortor, in pretium dui. Vivamus viverra maximus elit."
 
-# Contact page and footer
+# Contact page and footer.
+# Also feeds the generated ld+json https://schema.org/Organization which appears on the home page
 [params.contact]
+org_name = "Acme Corp Inc"
 email = "team@acme-corp.com"
 # This appears on the contact page
 full_address = "Acme Corp Inc, 1 Main Street, New York, NY, 10001"
 # These are used in the footer
-address_one = "Acme Corp Inc."
-address_two = "1 Main Street"
-address_three = "New York, NY, 10001"
+street_address = "1 Main Street"
+city = "New York, NY"
+post_code = "10001"
+country = "US"
 
-# Contact page and footer
+# Contact page
 [params.contact.phone]
 # number appears as href="tel:xxx-xxx-xxx"
 number = "+1123456789"

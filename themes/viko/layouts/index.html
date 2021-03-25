@@ -1,14 +1,3 @@
-{{ define "moreHead" }}
-    <script type='application/ld+json'>
-        {
-            "@context": "http://www.schema.org",
-            "@type": "WebSite",
-            "name": "Acme Corp",
-            "url": {{ .Site.BaseURL }}
-        }
-    </script>
-{{ end }}
-
 {{ define "main" }}
     {{ $demo := .Site.Params.demo_url }}
     {{ $contact := relref . "contact" }}

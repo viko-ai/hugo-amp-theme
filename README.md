@@ -64,11 +64,10 @@ Forget the crazy hacks or spammy stuff. Modern SEO basically boils down to:
 
 * Content content content!
 * Valid, well structured HTML
+* schema.org Microdata where appropriate  
 * Mobile friendly
 * Fast
 * Secure
-
-We've done our best to achieve these goals.
 
 [1]: https://www.viko.ai
 [2]: https://bulma.io

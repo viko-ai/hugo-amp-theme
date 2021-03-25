@@ -1,8 +1,5 @@
 {{ define "main" }}
-    {{ $demo := .Site.Params.demo_url }}
-    {{ $featureOne := relref . "features/feature-one" }}
-    {{ $featureTwo := relref . "features/feature-two" }}
-    <section class="vk-section">
+    <section class="section">
         <div class="container">
             {{ .Content }}
         </div>
