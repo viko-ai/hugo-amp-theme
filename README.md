@@ -20,7 +20,7 @@ illustrating how the theme can best be used. The theme itself can be found in th
 
 ## Questions? Feedback
 
-Please use the GitHub [discussions](/discussions) to ask questions
+Please use the GitHub [discussions][7] to ask questions
 
 ## Getting started
 
@@ -76,3 +76,4 @@ We've done our best to achieve these goals.
 [4]: https://amp.dev
 [5]: https://developers.google.com/search/docs/guides/about-amp
 [6]: https://postcss.org
+[7]: https://github.com/viko-ai/hugo-amp-theme/discussions
