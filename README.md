@@ -18,6 +18,10 @@ illustrating how the theme can best be used. The theme itself can be found in th
 * ld+json Microdata for [Google AMP search][5]
 * SEO
 
+## Questions? Feedback
+
+Please use the GitHub [discussions](/discussions) to ask questions
+
 ## Getting started
 
 Please see [DOCS.md](DOCS.md)
