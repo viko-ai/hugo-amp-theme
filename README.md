@@ -2,7 +2,7 @@
 
 ![Viko Ai logo](readme-images/viko-logo-sm.png)
 
-The theme used for the Viko Ai website. See [www.viko.ai][1] for a real world example. We decided to make this
+The theme used for the Viko Ai website. See [www.viko.co.uk][1] for a real world example. We decided to make this
 theme available to the wider community, hoping it will be of use. This repo also contains a sample Hugo site 
 illustrating how the theme can best be used. The theme itself can be found in the [themes/viko](themes/viko) directory.
 
@@ -32,7 +32,7 @@ Slim JS and CSS along with best practices (e.g. preloading) results in a Pagespe
 
 ![Optimised for speed](readme-images/google-pagespeed-report.png)
 
-**Note**: This score is based on the [www.viko.ai][1] homepage
+**Note**: This score is based on the [www.viko.co.uk][1] homepage
 
 ## Bulma based
 
@@ -69,7 +69,7 @@ Forget the crazy hacks or spammy stuff. Modern SEO basically boils down to:
 * Fast
 * Secure
 
-[1]: https://www.viko.ai
+[1]: https://www.viko.co.uk
 [2]: https://bulma.io
 [3]: https://purgecss.com
 [4]: https://amp.dev

@@ -1,6 +1,6 @@
 # Getting started
 
-This repo contains the basic theme we use for our own [www.viko.ai](https://www.viko.ai) website. We've packaged
+This repo contains the basic theme we use for our own [www.viko.co.uk](https://www.viko.co.uk) website. We've packaged
 the theme within a demo site showing how it can best be used. Although it has some quirks, we have been really 
 impressed with Hugo as a static site generator. For tech focussed organisations we think it's hard to beat.
 
