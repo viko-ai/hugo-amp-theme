@@ -21,7 +21,7 @@ with these organisations.
 ## Contents
 
 * [Requirements](#requirements)
-* [Config](#config)
+* [Getting started](#getting-started)
 * [Adding a blog post](#adding-a-blog-post)
 * [Adding a news article](#adding-a-news-article)
 * [Images](#images)
@@ -40,11 +40,14 @@ This theme requires the [extended edition][6] of Hugo, version 0.80.0 or later.
 
 **Note**: Please use the extended version of Hugo for the SASS and PostCSS support
 
-## Config
+You will also need to have node/npm installed
+
+## Getting started
 
 1. Check out the source code: `git clone git@github.com:viko-ai/hugo-theme.git`
-2. Modify `config.toml` to suit your needs
-3. Run in dev mode: `hugo -D server`
+2. Run `npm install`   
+3. Modify `config.toml` to suit your needs
+4. Run in dev mode: `hugo -D server`
 
 **Important**: If you run hugo server without the draft flag i.e. `hugo server` you will see errors like
 `REF_NOT_FOUND: Ref "features" from page "tags/_index.md": page not found`. This is because the templates, in 
