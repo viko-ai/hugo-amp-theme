@@ -8,6 +8,8 @@ copyright = "Copyright © 2018-{year} Acme Corp. All rights reserved."
 [params]
 author = "John Doe"
 description = "Lorem ipsum dolor sit amet"
+# Needed for analytics
+facebook_app_id = "123456789"
 
 # Text that appears on the home page
 [params.home]
@@ -41,6 +43,10 @@ display = "+1 (123) 456 789"
 
 # Footer
 [params.social]
-twitter = "https://twitter.com/acme"
-facebook = "https://www.facebook.com/acme/"
-instagram = "https://www.instagram.com/acme/"
+twitter_url = "https://twitter.com/acme"
+# Used for twitter:site field in the twitter cards
+twitter_handle = "@Acme"
+# Used for twitter:creator field in the twitter cards
+author_twitter_handle = "@JohnDoe"
+facebook_url = "https://www.facebook.com/acme/"
+instagram_url = "https://www.instagram.com/acme/"

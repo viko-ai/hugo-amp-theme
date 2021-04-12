@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $contactImg := resources.Get "images/contact.png" }}
 {{ $address := .Site.Params.contact.full_address }}
 {{ $email := .Site.Params.contact.email }}
 {{ $phone := .Site.Params.contact.phone.number }}
@@ -8,7 +9,7 @@
 <section class="section">
     <div class="container pt-3">
         <div class="columns is-vcentered">
-            <div class="column is-6"><img src="/images/contact.png" alt="Contact us"></div>
+            <div class="column is-6"><img src="{{ $contactImg.RelPermalink }}" alt="Contact us"></div>
             <div class="column is-6">
                 <h4 class="title is-spaced is-4">Lorem ipsum dolor sit amet</h4>
                 <p class="subtitle">consectetur adipiscing elit</p>

@@ -16,6 +16,8 @@ illustrating how the theme can best be used. The theme itself can be found in th
 * Tiny CSS footprint ~ 6kb (minified and compressed)
 * AWS Amplify and Netlify support
 * ld+json Microdata for [Google AMP search][5]
+* Facebook opengraph social metadata  
+* Twitter summary card  
 * SEO
 
 ## Questions? Feedback
@@ -56,6 +58,12 @@ These pages also include the ld+json microdata to feature in [Google's rich resu
 During a production build the SCSS is transformed to CSS then unused classes are purged using [PostCSS][6] and 
 [PurgeCSS][3]. The final CSS comes in around 6kb minified and compressed.
 
+## Social sharing
+
+![Facebook and Twitter Logo](readme-images/facebook-twitter-logo.png)
+
+Includes [Facebook opengraph][8] and [Twitter summary][9] card markup
+
 ## Search Engine Optimised
 
 ![Google logo](readme-images/google-logo-sm.png)
@@ -76,3 +84,5 @@ Forget the crazy hacks or spammy stuff. Modern SEO basically boils down to:
 [5]: https://developers.google.com/search/docs/guides/about-amp
 [6]: https://postcss.org
 [7]: https://github.com/viko-ai/hugo-amp-theme/discussions
+[8]: https://developers.facebook.com/docs/sharing/webmasters
+[9]: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image

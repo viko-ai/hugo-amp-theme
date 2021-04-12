@@ -11,7 +11,7 @@
     the org logo must meet Google's AMP publisher logo requirements
     see https://developers.google.com/search/docs/data-types/article#logo-guidelines
 -->
-{{ $orgLogo := absURL "images/logos/logo.png" }}
+{{ $orgLogo := resources.Get "images/logos/logo.png" }}
 {{ $author := .Site.Params.author }}
 {{ $orgName := .Site.Params.contact.org_name }}
 
@@ -40,7 +40,7 @@
             "name": {{ $orgName }},
             "logo": {
                 "@type": "ImageObject",
-                "url": {{ $orgLogo }}
+                "url": {{ $orgLogo.Permalink }}
             }
         },
         "datePublished": {{ .PublishDate }},

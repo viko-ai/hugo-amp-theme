@@ -51,3 +51,7 @@
 {{ with  .OutputFormats.Get "amp" -}}
     <link rel="amphtml" href="{{ .Permalink }}">
 {{ end }}
+
+{{ printf "<!-- twitter & facebook -->" | safeHTML }}
+{{ partial "social/twitter_card.html" . }}
+{{ partial "social/facebook_card.html" . }}

@@ -1,5 +1,5 @@
 <!doctype html>
-{{ $logo := relURL "images/logos/logo.png" }}
+{{ $logo := resources.Get "images/logos/logo.png" }}
 <!--suppress JSUnresolvedLibraryURL -->
 
 <html ⚡ lang="en-uk">
@@ -33,7 +33,7 @@
     <body>
         <header class="vk-amp-headerbar">
             <a href="{{ .Site.BaseURL }}">
-                <amp-img class="home-button" src="{{ $logo }}" width="90" height="30"></amp-img>
+                <amp-img class="home-button" src="{{ $logo.RelPermalink }}" width="90" height="30"></amp-img>
             </a>
             {{- partial "breadcrumb.html" . -}}
         </header>

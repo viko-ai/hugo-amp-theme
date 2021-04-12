@@ -68,6 +68,15 @@ You can edit the new blog post by modifying `content/blog/xxx/index.md`.
 
 The generated page will contain ld+json markup for an article of type [BlogPosting][2]
 
+### Twitter and Facebook sharing
+
+Posts will contain the meta tags needed by the Twitter and Facebook crawlers. Facebook and Twitter will use the
+image under content/blog/xxx/images/primary/2x1.png if it's present. Otherwise they will fall back to the default image
+at /assets/images/social-card-2x1.png
+
+See [facebook_card.html](themes/viko/layouts/partials/social/facebook_card.html) and 
+[twitter_card.html](themes/viko/layouts/partials/social/twitter_card.html)
+
 ### AMP support
 
 Creating a new blog entry will automatically create AMP enabled versions which can be found at
@@ -87,6 +96,15 @@ You can edit the new news article by modifying `content/press/xxx/index.md`.
 
 The generated page will contain ld+json markup for an article of type [NewsArticle][3]
 
+### Twitter and Facebook sharing
+
+Posts will contain the meta tags needed by the Twitter and Facebook crawlers. Facebook and Twitter will use the
+image under content/press/xxx/images/primary/2x1.png if it's present. Otherwise they will fall back to the default 
+image at /assets/images/social-card-2x1.png
+
+See [facebook_card.html](themes/viko/layouts/partials/social/facebook_card.html) and
+[twitter_card.html](themes/viko/layouts/partials/social/twitter_card.html)
+
 ### AMP support
 
 Creating a new press entry will automatically create AMP enabled versions which can be found at `/amp/press/xxx`
@@ -98,12 +116,14 @@ The list, single and single AMP templates assume various sizes of images are pre
 `content/blog/xxx/images/primary` or `content/press/xxx/images/primary` directories. Specifically:
 
 * 1x1.png
+* 2x1.png  
 * 4x3.png
 * 16x9.png
 * 16x9.svg
 
 You should replace these images but ensure the appropriate aspect ratios are preserved. These images are also
-referenced in the generated ld+json microdata which is needed for AMP rich results.
+referenced in the generated ld+json microdata which is needed for AMP rich results. The 2x1 image is referenced
+by the facebook and twitter cards.
 
 ## List and single page templates
 
@@ -116,8 +136,8 @@ page.
 ### Home page
 
 The contents of the home page can be changed simply by editing the settings in config.toml. See the `[params.home]`
-section. The home page image can be replaced at `static/images/home.png`. The logo can be replaced at
-`static/images/logo.png`
+section. The home page image can be replaced at `assets/images/home.png`. The logo can be replaced at
+`assets/images/logos/logo.png`
 
 The home page is based on the template at `themes/viko/layouts/index.html`
 
@@ -145,7 +165,7 @@ The benefits is based on the template at `themes/viko/layouts/_default/features.
 ### Contact
 
 The contents of the contact us page (`/contact/`) can be changed simply by editing the settings in config.toml.
-The image can be replaced at `static/images/contact.png`. The logo can be replaced at
+The image can be replaced at `assets/images/contact.png`. The logo can be replaced at
 
 The contact us page is based on the template at `themes/viko/layouts/_default/contact.html`
 

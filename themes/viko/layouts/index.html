@@ -1,6 +1,7 @@
 {{ define "main" }}
     {{ $demo := .Site.Params.demo_url }}
     {{ $contact := relref . "contact" }}
+    {{ $homeImg := resources.Get "images/home.png" }}
     <section class="hero">
         <div class="hero-body">
             <div class="container">
@@ -14,7 +15,7 @@
                     </div>
                     <div class="column is-6">
                         <figure class="image is-4by3">
-                            <img src="/images/home.png" alt="{{ .Site.Title }}">
+                            <img src="{{ $homeImg.RelPermalink }}" alt="{{ .Site.Title }}">
                         </figure>
                     </div>
                 </div>

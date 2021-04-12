@@ -2,7 +2,7 @@
     Bulma based navbar, change the links to suit your requirements
 -->
 
-{{ $logo := relURL "images/logos/logo.png" }}
+{{ $logo := resources.Get "images/logos/logo.png" }}
 {{ $orgName := .Site.Params.contact.org_name }}
 {{ $features := relref . "features" }}
 {{ $featureOne := relref . "features/feature-one" }}
@@ -15,7 +15,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item " href="{{ $.Site.BaseURL }}">
-                <img src="{{ $logo }}" alt="{{ $orgName }}" />
+                <img src="{{ $logo.RelPermalink }}" alt="{{ $orgName }}" />
             </a>
             <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
