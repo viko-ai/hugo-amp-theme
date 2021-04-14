@@ -1,12 +1,15 @@
 ---
 title: "Careers"
 date: 2021-01-27T17:00:48Z
-draft: true
 layout: careers
+menu: 
+  company:
+    weight: 3
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend est dui.
 intro: >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend est dui. 
     Curabitur in magna leo. Donec malesuada volutpat sem eu condimentum. Nulla sed lectus dolor.
+draft: false
 ---
 {{< careers/benefits >}} 
     {{< careers/benefit title="The latest technology" image="https://via.placeholder.com/400x400.png" >}}

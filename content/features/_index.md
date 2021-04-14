@@ -1,9 +1,14 @@
 ---
 title: "Features"
 date: 2021-01-27T16:29:20Z
-draft: true
 layout: features
+menu:
+  main:
+    weight: 1
+  product:
+    weight: 1
 description: Learn about all the great features of Acme inc
+draft: false
 ---
 {{< features/intro >}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a enim nisl

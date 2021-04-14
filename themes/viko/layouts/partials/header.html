@@ -4,13 +4,8 @@
 
 {{ $logo := resources.Get "images/logos/logo.png" }}
 {{ $orgName := .Site.Params.contact.org_name }}
-{{ $features := relref . "features" }}
-{{ $featureOne := relref . "features/feature-one" }}
-{{ $featureTwo := relref . "features/feature-two" }}
-{{ $benefits := relref . "benefits" }}
-{{ $blog := relref . "blog" }}
-{{ $contact := relref . "contact" }}
 
+{{ $currentPage := . }}
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
@@ -25,20 +20,29 @@
         </div>
         <div class="navbar-menu">
             <div class="navbar-end">
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a href="{{ $features }}" class="navbar-link">Features</a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item navbar-item-dropdown" href="{{ $featureOne }}">Feature one</a>
-                        <a class="navbar-item navbar-item-dropdown" href="{{ $featureTwo }}">Feature two</a>
+            {{ $list := .Site.Menus.main }}
+            {{ $len := (len $list) }}
+
+            {{ range $index, $element := $list }}
+                {{ if $element.HasChildren }}
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="{{ $element.URL }}" class="navbar-link">{{ $element.Name }}</a>
+                        <div class="navbar-dropdown">
+                            {{ range $element.Children }}
+                                <a class="navbar-item navbar-item-dropdown" href="{{ .URL }}">{{ .Name }}</a>
+                            {{ end }}
+                        </div>
                     </div>
-                </div>
-                <a class="navbar-item" href="{{ $benefits }}">Benefits</a>
-                <a class="navbar-item" href="{{ $blog }}">Blog</a>
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a href="{{ $contact }}" class="button is-primary">Contact us</a>
+                {{ else if lt (add $index 1) $len }}
+                    <a class="navbar-item" href="{{ $element.URL }}">{{ $element.Name }}</a>
+                {{ else }}
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a href="{{ $element.URL }}" class="button is-primary">{{ $element.Name }}</a>
+                        </div>
                     </div>
-                </div>
+                {{ end }}
+            {{ end }}
             </div>
         </div>
     </div>

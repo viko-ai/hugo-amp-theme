@@ -1,9 +1,13 @@
 ---
 title: "Feature one"
 date: 2021-03-08T10:00:00Z 
-draft: false 
 breadcrumb: true
+menu:
+  main:
+    parent: 'Features'
+    weight: 1
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a enim nisl.
+draft: false
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum leo vel dolor venenatis, sed interdum nunc
 venenatis. Ut maximus urna felis, vitae egestas nunc ultricies ac. Sed ac felis et orci luctus feugiat vel quis mi.

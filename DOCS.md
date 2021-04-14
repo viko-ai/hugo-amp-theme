@@ -125,6 +125,18 @@ You should replace these images but ensure the appropriate aspect ratios are pre
 referenced in the generated ld+json microdata which is needed for AMP rich results. The 2x1 image is referenced
 by the facebook and twitter cards.
 
+## Menus
+
+This theme uses Hugo's [menu system][7]. Four menus are defined:
+
+1. **main** - The top menu. Note: the last element in the menu, (as determined by its weight) is a button.
+2. **product** - Used in the footer under the "Product" heading
+3. **company** - Used in the footer under the "About us" heading
+4. **legal** - Used in the footer on the bottom left - used for terms of use, privacy policy etc
+
+For example in the sample site, the "Features" section is part of both the main and product menus. The "Press" section
+uses the company menu only
+
 ## List and single page templates
 
 We include a default list.html and single.html template which will render for all pages that don't have their own
@@ -205,3 +217,4 @@ own themes/ directory. Enable the theme in your config.toml / config.yml with `t
 [4]: https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html
 [5]: https://docs.netlify.com/configure-builds/file-based-configuration/
 [6]: https://gohugo.io/getting-started/installing/
+[7]: https://gohugo.io/content-management/menus/
