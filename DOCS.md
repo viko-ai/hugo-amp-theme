@@ -25,6 +25,7 @@ with these organisations.
 * [Adding a blog post](#adding-a-blog-post)
 * [Adding a news article](#adding-a-news-article)
 * [Images](#images)
+* [Menus](#menus)  
 * [Modifying individual pages](#modifying-individual-pages)
     * [Home](#home-page)
     * [Careers](#careers)
